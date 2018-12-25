@@ -2,6 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QMediaPlayer>
+#include <QMediaPlaylist>
+#include <QStandardItemModel>
 
 namespace Ui {
 class MainWindow;
@@ -17,6 +20,9 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    QStandardItemModel  *playListModel;
+    QMediaPlayer        *player;
+    QMediaPlaylist      *playlist;
 };
 
 #endif // MAINWINDOW_H
