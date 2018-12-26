@@ -73,14 +73,14 @@
      <rect>
       <x>110</x>
       <y>250</y>
-	  <width>31</width>
+      <width>31</width>
       <height>23</height>
      </rect>
     </property>
     <property name="text">
-      <string>Sort</string>
-     </property>
-    </widget>
+     <string>Sort</string>
+    </property>
+   </widget>
    <widget class="QPushButton" name="previousButton">
     <property name="geometry">
      <rect>
@@ -131,7 +131,6 @@
      </rect>
     </property>
     <property name="text">
-
      <string/>
     </property>
     <property name="icon">
@@ -185,7 +184,19 @@
       <normaloff>res/next.png</normaloff>res/next.png</iconset>
     </property>
    </widget>
-    
+   <widget class="QPushButton" name="btnSort_2">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>250</y>
+      <width>31</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Mix</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
