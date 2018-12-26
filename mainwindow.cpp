@@ -41,6 +41,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(, , player, &QMediaPlayer::pause);
     connect(, , player, &QMediaPlayer::stop);
     connect(,,this,&MainWindow::on_btnDlt_clicked);
+    connect(,,this,&MainWindow::on_btnSort_clicked);
     //TODO: добавить связи для остальных кнопок
 }
 
@@ -75,6 +76,11 @@ void MainWindow::on_btnAdd_clicked()
 
 void MainWindow::on_btnDlt_clicked(){
     playlist->clear();
+    playListModel->clear();
+}
+
+void MainWindow::on_btnDlt_clicked(){
+    playListModel->sort(1);
 }
 
 void MainWindow::on_VolumeSlider_sliderMoved(int position)
