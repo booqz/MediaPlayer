@@ -36,6 +36,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // TODO: соединить слоты плеера/плейлиста с кнопками интерфейса
     connect(ui->previousButton, QPushButton::clicked, playlist, &QMediaPlaylist::previous);
+
     connect(ui->previousButton_2, QPushButton::clicked, playlist, &QMediaPlaylist::next);
     connect(ui->playButton,  QPushButton::clicked, player, &QMediaPlayer::play);
     connect(ui->playButton_2, QPushButton::clicked , player, &QMediaPlayer::pause);
@@ -43,6 +44,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->dltBut,QPushButton::clicked,this,&MainWindow::on_btnDlt_clicked);
     connect(ui->btnSort,QPushButton::clicked,this,&MainWindow::on_btnSort_clicked);
     connect(ui->btnSort_2,QPushButton::clicked,this,&MainWindow::on_btnShfl_clicked);
+
     //TODO: добавить связи для остальных кнопок
 }
 

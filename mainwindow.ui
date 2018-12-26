@@ -211,6 +211,7 @@
     </property>
    </widget>
   </widget>
+
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
