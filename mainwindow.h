@@ -33,6 +33,7 @@ private slots:
     QStandardItemModel  *playListModel;
     QMediaPlayer        *player;
     QMediaPlaylist      *playlist;
+    void on_VolumeSlider_sliderMoved(int position);
 };
 
 #endif // MAINWINDOW_H

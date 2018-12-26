@@ -84,6 +84,23 @@
    <widget class="QPushButton" name="previousButton">
     <property name="geometry">
      <rect>
+      <x>130</x>
+      <y>10</y>
+      <width>31</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>res/prev.png</normaloff>res/prev.png</iconset>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="playButton">
+    <property name="geometry">
+     <rect>
       <x>10</x>
       <y>10</y>
       <width>31</width>
@@ -91,10 +108,20 @@
      </rect>
     </property>
     <property name="text">
-     <string>prev</string>
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>res/play.png</normaloff>res/play.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>20</width>
+      <height>16</height>
+     </size>
     </property>
    </widget>
-   <widget class="QPushButton" name="playButton">
+   <widget class="QPushButton" name="playButton_2">
     <property name="geometry">
      <rect>
       <x>50</x>
@@ -104,8 +131,58 @@
      </rect>
     </property>
     <property name="text">
-      <string>play</string>
-     </property>
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>res/pause.png</normaloff>res/pause.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>20</width>
+      <height>16</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="playButton_3">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>10</y>
+      <width>31</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>res/stop.png</normaloff>res/stop.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>20</width>
+      <height>16</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="previousButton_2">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>10</y>
+      <width>31</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>res/next.png</normaloff>res/next.png</iconset>
+    </property>
    </widget>
     
   </widget>
