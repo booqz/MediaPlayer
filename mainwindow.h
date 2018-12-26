@@ -28,6 +28,7 @@ private:
 
 private slots:
     void on_btnAdd_clicked();//слот для добавления треков по кнопочке "add"
+    void on_btnDlt_clicked();
 
     QStandardItemModel  *playListModel;
     QMediaPlayer        *player;
