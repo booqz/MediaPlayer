@@ -72,3 +72,8 @@ void MainWindow::on_btnAdd_clicked()
     playListModel->setHeaderData(1, Qt::Horizontal, "Path");
    
 }
+
+void MainWindow::on_VolumeSlider_sliderMoved(int position)
+{
+    player->setVolume(position);
+}
