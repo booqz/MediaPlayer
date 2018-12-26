@@ -40,7 +40,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->playButton, QPushButton::clicked, player, &QMediaPlayer::play);
     connect(, , player, &QMediaPlayer::pause);
     connect(, , player, &QMediaPlayer::stop);
-
+    connect(,,this,&MainWindow::on_btnDlt_clicked);
     //TODO: добавить связи для остальных кнопок
 }
 
@@ -71,6 +71,10 @@ void MainWindow::on_btnAdd_clicked()
     playListModel->setHeaderData(0, Qt::Horizontal,"Name");//установим заголовки столбцов
     playListModel->setHeaderData(1, Qt::Horizontal, "Path");
    
+}
+
+void MainWindow::on_btnDlt_clicked(){
+    playlist->clear();
 }
 
 void MainWindow::on_VolumeSlider_sliderMoved(int position)
