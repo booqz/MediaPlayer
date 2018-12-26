@@ -10,41 +10,49 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    //настройка таблицы плейлиста
-    mPlayListModel = new QStandardItemModel(this);
-
-
+    playListModel = new QStandardItemModel(this);
     ui->mPlayListView->setModel(mPlayListModel);
-
-    ui->mPlayListView->hideColumn(1); //скрываем колонку в которой хранится путь к файлу
-    ui->mPlayListView->verticalHeader()->setVisible(false);//скрываем нумерацию строк
-    ui->mPlayListView->setSelectionBehavior(QAbstractItemView::SelectRows);//включаем выделение строк
-    ui->mPlayListView->setSelectionMode(QAbstractItemView::SingleSelection); //разрешаем выделять только одну строку
-    ui->mPlayListView->resizeColumnsToContents();
-    ui->mPlayListView->setEditTriggers(QAbstractItemView::NoEditTriggers);//отключаем редактирование
-
-
-
-    ui->mPlayListView->horizontalHeader()->setStretchLastSection(true);//подгонка последней видимой колонке по ширине tableView
+     
+    playListModel->setHorizontalHeaderLabels(QStringList()  << tr("Audio Track")        //Заголовки таблицы
+                                                                << tr("File Path"));    //
+    ui->playListModel->hideColumn(1); //скрываем колонку в которой хранится путь к файлу
+    ui->playListModel->verticalHeader()->setVisible(false);//скрываем нумерацию строк
+    ui->playListModel->setSelectionBehavior(QAbstractItemView::SelectRows);//включаем выделение строк
+    ui->playListModel->setSelectionMode(QAbstractItemView::SingleSelection); //разрешаем выделять только одну строку
+    ui->playListModel->resizeColumnsToContents();
+    ui->playListModel->setEditTriggers(QAbstractItemView::NoEditTriggers);//отключаем редактирование
 
 
 
+    ui->playListModel->horizontalHeader()->setStretchLastSection(true);//подгонка последней видимой колонке по ширине tableView
 
 
+    player = new QMediaPlayer(this);
+    playlist = new QMediaPlaylist(player);
 
+    player->setPlaylist(m_playlist);
+    player->setVolume(70);                    // TODO: изменить эту строку при реализации ползунка громкости
+    playlist->setPlaybackMode(QMediaPlaylist::Loop);
 
+    // TODO: соединить слоты плеера/плейлиста с кнопками интерфейса
+    connect(, , playlist, &QMediaPlaylist::previous);
+    connect(, , playlist, &QMediaPlaylist::next);
+    connect(, , player, &QMediaPlayer::play);
+    connect(, , player, &QMediaPlayer::pause);
+    connect(, , player, &QMediaPlayer::stop);
 
+    //TODO: добавить связи для остальных кнопок
 }
+
 
 MainWindow::~MainWindow()
 {
     delete ui;
-    delete mPlayList;
-    delete mPlayListModel;
-
+    delete playListModel;
+    delete playlist;
+    delete player;
+ 
 }
-
-
 
 void MainWindow::on_btnAdd_clicked()
 {
@@ -58,8 +66,9 @@ void MainWindow::on_btnAdd_clicked()
         QList<QStandardItem *> items;
         items.append(new QStandardItem(QDir(filePath).dirName()));
         items.append(new QStandardItem(filePath));
-        mPlayListModel->appendRow(items);
+        playListModel->appendRow(items);
     }
-    mPlayListModel->setHeaderData(0, Qt::Horizontal,"Name");//установим заголовки столбцов
-    mPlayListModel->setHeaderData(1, Qt::Horizontal, "Path");
+    playListModel->setHeaderData(0, Qt::Horizontal,"Name");//установим заголовки столбцов
+    playListModel->setHeaderData(1, Qt::Horizontal, "Path");
+   
 }

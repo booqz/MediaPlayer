@@ -2,9 +2,10 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QStandardItemModel>
+
 #include <QMediaPlayer>
-#include <QMediaPlayList>
+#include <QMediaPlaylist>
+#include <QStandardItemModel>
 
 
 namespace Ui {
@@ -23,11 +24,14 @@ public:
 
 private:
     Ui::MainWindow *ui;
-    QStandardItemModel *mPlayListModel; //модель данных плейлиста для отображения
-    QMediaPlaylist     *mPlayList;      //плейлист проигрывателя
+
 
 private slots:
     void on_btnAdd_clicked();//слот для добавления треков по кнопочке "add"
+
+    QStandardItemModel  *playListModel;
+    QMediaPlayer        *player;
+    QMediaPlaylist      *playlist;
 };
 
 #endif // MAINWINDOW_H
