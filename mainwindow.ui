@@ -47,7 +47,11 @@
      </rect>
     </property>
     <property name="text">
-     <string>prev</string>
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>res/prev.png</normaloff>res/prev.png</iconset>
     </property>
    </widget>
    <widget class="QPushButton" name="playButton">
@@ -117,6 +121,23 @@
       <width>20</width>
       <height>16</height>
      </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="previousButton_2">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>10</y>
+      <width>31</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>res/next.png</normaloff>res/next.png</iconset>
     </property>
    </widget>
   </widget>
