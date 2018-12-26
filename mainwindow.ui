@@ -87,7 +87,7 @@
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>pause.png</normaloff>pause.png</iconset>
+      <normaloff>res/pause.png</normaloff>res/pause.png</iconset>
     </property>
     <property name="iconSize">
      <size>
