@@ -198,19 +198,21 @@
      <string>Mix</string>
     </property>
    </widget>
-  <widget class="QPushButton" name="deleteBtn">
+   <widget class="QPushButton" name="dltBut">
     <property name="geometry">
      <rect>
       <x>50</x>
-        <y>250</y>
+      <y>250</y>
       <width>31</width>
       <height>23</height>
      </rect>
     </property>
     <property name="text">
-      <string>Del</string>
-       </property>
+     <string>Del</string>
+    </property>
    </widget>
+  </widget>
+
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
