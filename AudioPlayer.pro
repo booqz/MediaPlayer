@@ -24,15 +24,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 CONFIG += c++11
 
-SOURCES += \
-        main.cpp \
+SOURCES +=         main.cpp \
         mainwindow.cpp
 
-HEADERS += \
-        mainwindow.h
 
-FORMS += \
-        mainwindow.ui
+HEADERS +=        mainwindow.h
+
+FORMS +=         mainwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -41,7 +39,14 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 DISTFILES += \
     res/pause.png \
-    res/play.png
+    res/play.png \
+    res/next.png \
+    res/prev.png \
+    res/stop.png
 
-RESOURCES += \
-    res/res.qrc
+
+RESOURCES += res/pause.png \
+    res/play.png \
+    res/next.png \
+    res/prev.png \
+    res/stop.png

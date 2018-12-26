@@ -94,8 +94,8 @@
      <string/>
     </property>
     <property name="icon">
-     <iconset>
-      <normaloff>res/prev.png</normaloff>res/prev.png</iconset>
+     <iconset resource="../build-AudioPlayer-Desktop_Qt_5_11_2_MinGW_32bit-Debug/debug/qmake_qmake_immediate.qrc">
+      <normaloff>:/res/prev.png</normaloff>:/res/prev.png</iconset>
     </property>
    </widget>
    <widget class="QPushButton" name="playButton">
@@ -111,8 +111,8 @@
      <string/>
     </property>
     <property name="icon">
-     <iconset>
-      <normaloff>res/play.png</normaloff>res/play.png</iconset>
+     <iconset resource="../build-AudioPlayer-Desktop_Qt_5_11_2_MinGW_32bit-Debug/debug/qmake_qmake_immediate.qrc">
+      <normaloff>:/res/play.png</normaloff>:/res/play.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -134,8 +134,8 @@
      <string/>
     </property>
     <property name="icon">
-     <iconset>
-      <normaloff>res/pause.png</normaloff>res/pause.png</iconset>
+     <iconset resource="../build-AudioPlayer-Desktop_Qt_5_11_2_MinGW_32bit-Debug/debug/qmake_qmake_immediate.qrc">
+      <normaloff>:/res/pause.png</normaloff>:/res/pause.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -157,8 +157,8 @@
      <string/>
     </property>
     <property name="icon">
-     <iconset>
-      <normaloff>res/stop.png</normaloff>res/stop.png</iconset>
+     <iconset resource="../build-AudioPlayer-Desktop_Qt_5_11_2_MinGW_32bit-Debug/debug/qmake_qmake_immediate.qrc">
+      <normaloff>:/res/stop.png</normaloff>:/res/stop.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -180,11 +180,10 @@
      <string/>
     </property>
     <property name="icon">
-     <iconset>
-      <normaloff>res/next.png</normaloff>res/next.png</iconset>
+     <iconset resource="../build-AudioPlayer-Desktop_Qt_5_11_2_MinGW_32bit-Debug/debug/qmake_qmake_immediate.qrc">
+      <normaloff>:/res/next.png</normaloff>:/res/next.png</iconset>
     </property>
    </widget>
-
    <widget class="QPushButton" name="btnSort_2">
     <property name="geometry">
      <rect>
@@ -234,6 +233,8 @@
   <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="../build-AudioPlayer-Desktop_Qt_5_11_2_MinGW_32bit-Debug/debug/qmake_qmake_immediate.qrc"/>
+ </resources>
  <connections/>
 </ui>
