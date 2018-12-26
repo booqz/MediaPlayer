@@ -184,6 +184,7 @@
       <normaloff>res/next.png</normaloff>res/next.png</iconset>
     </property>
    </widget>
+
    <widget class="QPushButton" name="btnSort_2">
     <property name="geometry">
      <rect>
@@ -211,6 +212,7 @@
     </property>
    </widget>
   </widget>
+
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
