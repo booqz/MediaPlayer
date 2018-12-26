@@ -35,7 +35,7 @@ MainWindow::MainWindow(QWidget *parent) :
     playlist->setPlaybackMode(QMediaPlaylist::Loop);
 
     // TODO: соединить слоты плеера/плейлиста с кнопками интерфейса
-    connect(, , playlist, &QMediaPlaylist::previous);
+    connect(ui->previousButton, QPushButton::clicked, playlist, &QMediaPlaylist::previous);
     connect(, , playlist, &QMediaPlaylist::next);
     connect(, , player, &QMediaPlayer::play);
     connect(, , player, &QMediaPlayer::pause);
